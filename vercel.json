@@ -1,8 +1,0 @@
-{
-    "routes": [
-      { "handle": "filesystem" },
-      { "src": "/result", "dest": "result.js" },
-      { "src": "/process-form", "dest": "app.js" }
-    ]
-  }
-  
