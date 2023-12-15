@@ -6,7 +6,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-mongoose.connect(uri);
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const Form = require('./models/Form'); // 請確保路徑正確
 const result = require('./routes/result');
