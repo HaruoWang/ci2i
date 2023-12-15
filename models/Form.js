@@ -1,6 +1,8 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
+const uri = process.env.MONGODB_URI;
 
-mongoose.connect('mongodb+srv://haruo:wang@test.6n0ikyf.mongodb.net/test');
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const Form = mongoose.model('Form', {
     name: String,
