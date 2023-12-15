@@ -1,10 +1,12 @@
 // app.js
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const port = 3000;
 const mongoose = require('mongoose');
+const uri = process.env.MONGODB_URI;
 
-mongoose.connect('mongodb+srv://haruo:wang@test.6n0ikyf.mongodb.net/test');
+mongoose.connect(uri);
 
 const Form = require('./models/Form'); // 請確保路徑正確
 const result = require('./routes/result');
